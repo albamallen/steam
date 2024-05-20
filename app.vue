@@ -8,7 +8,7 @@
 
 <style lang="postcss">
 :root{
-  --primary: #00FF03;  
+  --primary: #00FF03;
 }
 
   *{

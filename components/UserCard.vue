@@ -17,5 +17,3 @@
  });
  const { user } = props;
  </script>
- 
- 
