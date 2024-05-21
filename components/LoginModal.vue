@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="modal-overlay">
     <div class="modal-wrapper">
       <div class="modal-content">
@@ -158,5 +158,146 @@ export default {
 }
 .create-account-button:hover {
   background-color: #909090; /* Cambia el color al pasar el mouse */
+}
+</style> -->
+
+
+<template>
+  <div class="modal-overlay" @click.self="closeModal">
+    <div class="modal-wrapper">
+      <div class="modal-content">
+        <button class="close-button" @click="closeModal">×</button>
+        <h2 class="modal-title">Inicia sesión en Steam</h2>
+        <div class="form-group">
+          <label for="username">Usuario</label>
+          <input type="text" id="username" v-model="username" placeholder="Usuario">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" v-model="password" placeholder="Password">
+        </div>
+        <div class="button-group">
+          <button @click="login" class="primary-button">Login</button>
+        </div>
+        <div class="button-group">
+          <button @click="createAccount" class="secondary-button">Crear cuenta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      username: '',
+      password: ''
+    };
+  },
+  methods: {
+    login() {
+      // Implementa aquí la lógica de inicio de sesión
+      console.log('Usuario:', this.username);
+      console.log('Password:', this.password);
+      // Limpia los campos después de iniciar sesión
+      this.username = '';
+      this.password = '';
+      // Cierra el modal después de iniciar sesión
+      this.closeModal();
+    },
+    closeModal() {
+      this.$emit('close');
+    },
+    createAccount() {
+      // Implementa aquí la lógica para redirigir al usuario a la página de registro
+      console.log('Redirigiendo a la página de registro...');
+    }
+  }
+};
+</script>
+
+<style scoped>
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-wrapper {
+  background: #FDFDFD;
+  border-radius: 15px;
+  border: 2px black solid;
+  padding: 40px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.close-button {
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.modal-title {
+  text-align: center;
+  color: #151615;
+  font-size: 28px;
+  font-family: Neue Haas Grotesk Text Pro;
+  font-weight: 500;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #6C6C6C;
+  font-size: 16px;
+  font-family: SF Mono;
+  font-weight: 400;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+}
+
+.primary-button {
+  background: #00FF03;
+  color: #151615;
+  border: none;
+  border-radius: 45px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.secondary-button {
+  background: #E6E6E6;
+  color: #6C6C6C;
+  border: none;
+  border-radius: 41px;
+  padding: 10px 30px;
+  cursor: pointer;
 }
 </style>
