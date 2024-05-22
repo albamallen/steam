@@ -1,3 +1,4 @@
+
 <template>
 <NuxtLink to="tiendaJuegos">
   <div
