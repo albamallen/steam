@@ -19,27 +19,27 @@
   </template>
   
   <script>
-  import SwiperCore, { Navigation, Pagination } from 'swiper/core';
-  import { Swiper, SwiperSlide } from 'swiper/vue';
-  import 'swiper/swiper-bundle.css';
+  // import SwiperCore, { Navigation, Pagination } from 'swiper/core';
+  // import { Swiper, SwiperSlide } from 'swiper/vue';
+  // import 'swiper/swiper-bundle.css';
   
-  SwiperCore.use([Navigation, Pagination]);
+  // SwiperCore.use([Navigation, Pagination]);
   
-  export default {
-    components: {
-      Swiper,
-      SwiperSlide
-    },
-    data() {
-      return {
-        slides: [
-          { image: '/1.jpg', title: 'Slide 1', subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc velit, eleifend malesuada leo vitae, ornare tempus turpis. Cras interdum augue sit amet ipsum mollis, non euismod nibh cursus. Suspendisse malesuada, velit in luctus lobortis, libero metus dictum metus', price: '$10' },
-          { image: '/2.jpg', title: 'Slide 2', subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc velit, eleifend malesuada leo vitae, ornare tempus turpis. Cras interdum augue sit amet ipsum mollis, non euismod nibh cursus. Suspendisse malesuada, velit in luctus lobortis, libero metus dictum metus', price: '$20' },
-          { image: '/3.jpg', title: 'Slide 3', subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc velit, eleifend malesuada leo vitae, ornare tempus turpis. Cras interdum augue sit amet ipsum mollis, non euismod nibh cursus. Suspendisse malesuada, velit in luctus lobortis, libero metus dictum metus', price: '$30' }
-        ]
-      };
-    }
-  };
+  // export default {
+  //   components: {
+  //     Swiper,
+  //     SwiperSlide
+  //   },
+  //   data() {
+  //     return {
+  //       slides: [
+  //         { image: '/1.jpg', title: 'Slide 1', subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc velit, eleifend malesuada leo vitae, ornare tempus turpis. Cras interdum augue sit amet ipsum mollis, non euismod nibh cursus. Suspendisse malesuada, velit in luctus lobortis, libero metus dictum metus', price: '$10' },
+  //         { image: '/2.jpg', title: 'Slide 2', subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc velit, eleifend malesuada leo vitae, ornare tempus turpis. Cras interdum augue sit amet ipsum mollis, non euismod nibh cursus. Suspendisse malesuada, velit in luctus lobortis, libero metus dictum metus', price: '$20' },
+  //         { image: '/3.jpg', title: 'Slide 3', subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nunc velit, eleifend malesuada leo vitae, ornare tempus turpis. Cras interdum augue sit amet ipsum mollis, non euismod nibh cursus. Suspendisse malesuada, velit in luctus lobortis, libero metus dictum metus', price: '$30' }
+  //       ]
+  //     };
+  //   }
+  // };
   </script>
   
   <style scoped>

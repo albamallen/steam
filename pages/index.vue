@@ -2,8 +2,6 @@
 <template>
   <div>
     <SwiperComponent />
-    <CardGame />
-    
   </div>
 </template>
 

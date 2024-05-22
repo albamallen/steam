@@ -4,7 +4,7 @@
         <div class="modal-content">
           <button class="close-button" @click="closeModal">×</button>
           <h2>Crear cuenta en Steam</h2>
-          
+          <!-- Aquí van tus campos de registro -->
           <div class="form-group">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" v-model="nombre" placeholder="Nombre">
@@ -25,16 +25,19 @@
             <input type="password" id="password" v-model="password" placeholder="Contraseña">
             <hr class="line">
           </div>
+          <!-- Más campos de registro -->
           <div class="button-group">
             <button @click="register" class="login-button">Crear cuenta</button>
           </div>
+          <!-- Botón para volver -->
           <div class="button-group">
             <button @click="closeModal" class="create-account-button">Login</button>
           </div>
         </div>
       </div>
     </div>
-  </template>-->
+  </template>
+  
   <script>
   export default {
     data() {
@@ -64,7 +67,7 @@
   }
   </script>
   
-<style scoped>
+  <style scoped>
   .modal-overlay {
     position: fixed;
     top: 0;
